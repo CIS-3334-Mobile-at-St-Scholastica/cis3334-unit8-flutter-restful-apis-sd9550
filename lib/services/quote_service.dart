@@ -13,7 +13,7 @@ Future<QuoteModel> fetchQuoteModel() async {
     throw Exception('Quotes API ${resp.statusCode}: ${resp.body}');
   }
 
-  // The API returns a list, so we take the first quote
+  // first quote is the one we want
   final List<QuoteModel> quotes = welcomeFromJson(resp.body);
   if (quotes.isEmpty) {
     throw Exception('No quotes found');

@@ -22,6 +22,7 @@ class QuoteModel {
     required this.categories,
   });
 
+  // Turn the quote into a list due to JSON
   List<String> get facts => [quote];
 
   factory QuoteModel.fromJson(Map<String, dynamic> json) => QuoteModel(
